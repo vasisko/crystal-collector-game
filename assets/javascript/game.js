@@ -37,7 +37,7 @@ $(document).ready(function () {
     startGame();
     //  Which crystal selected?  Determine, add value
 
-    $("button").on('click', function () {
+    $("img").on('click', function () {
 
         if(crystalTotal < gameTotal){
 
@@ -58,10 +58,13 @@ $(document).ready(function () {
 
 
     });
+    //------WIN-----------
+    if (crystalTotal === gameTotal){
+        
+    }
 
-    if (crystalTotal === gameTotal){}
-
-
+    //------LOSES-----------
+    if (crystalTotal > gameTotal){}
 });
 
 
