@@ -11,7 +11,7 @@ var greencrystal;
 var purplecrystal;
 var crystalTotal;
 var gameTotal;
-var crystalPicked="";
+var crystalPicked = "";
 var addtototal;
 
 
@@ -19,38 +19,50 @@ var addtototal;
 
 function startGame() {
 
-    crystalTotal=0;
+    crystalTotal = 0;
     // Set random values:gameTotal(from 19-120) and each crystal value (1-12)
     gameTotal = Math.floor(Math.random() * 120) + 19;
 
-    redcrystal = Math.floor(Math.random()*12) + 1;
-    bluecrystal = Math.floor(Math.random()*12) + 1;
-    purplecrystal = Math.floor(Math.random()*12) + 1;
-    greencrystal = Math.floor(Math.random()*12) + 1;
-//display gameboard
-    console.log("game # = " + gameTotal + " red= " +   redcrystal + " green= " + greencrystal);
+    redcrystal = Math.floor(Math.random() * 12) + 1;
+    bluecrystal = Math.floor(Math.random() * 12) + 1;
+    purplecrystal = Math.floor(Math.random() * 12) + 1;
+    greencrystal = Math.floor(Math.random() * 12) + 1;
+    //display gameboard
+    console.log("game # = " + gameTotal + " red= " + redcrystal + " blue= " + bluecrystal+ " purplegreen= " + purplecrystal + " green= " + greencrystal);
 
 }
-//  PLAY-----------------------
-$(document).ready(function() {
-console.log("start");
+//  --------------PLAY-----------------------
+$(document).ready(function () {
+    console.log("start");
     startGame();
-//  Which crystal selected?
- 
-    $("button").on('click', function(){
-    if ($(this).attr("value")==="redcrystal"){
-        crystalTotal = crystalTotal +  redcrystal;
-    };
+    //  Which crystal selected?  Determine, add value
 
-    console.log(crystalTotal); 
-    
+    $("button").on('click', function () {
+
+        if(crystalTotal < gameTotal){
+
+            if ($(this).attr("value") === "redcrystal") {
+            crystalTotal +=  redcrystal;
+        }
+            else if ($(this).attr("value") === "bluecrystal") {
+            crystalTotal +=  bluecrystal;
+        }
+            else if ($(this).attr("value") === "purplecrystal") {
+            crystalTotal +=  purplecrystal;
+        }
+            else if ($(this).attr("value") === "greencrystal") {
+            crystalTotal +=  greencrystal;
+        };
+    }
+        console.log(crystalTotal);
+
 
     });
-    
-     
+
+    if (crystalTotal === gameTotal){}
 
 
-    }) ;
+});
 
 
 //  Add crystal's value to crystalTotal
