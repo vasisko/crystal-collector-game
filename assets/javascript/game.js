@@ -2,6 +2,7 @@
 
 //aka CrystalMath...It's Add-ictive---//
 
+
 //Game Variables//
 
 var redcrystal;
@@ -10,21 +11,48 @@ var greencrystal;
 var purplecrystal;
 var crystalTotal;
 var gameTotal;
+var crystalPicked="";
+var addtototal;
+
 
 //Start:Initialize Variables
 
 function startGame() {
 
-// Set random values:gameTotal(from 19-120) and each crystal value (1-12)
-gameTotal = Math.floor(Math.random(120) + 19);
+    crystalTotal=0;
+    // Set random values:gameTotal(from 19-120) and each crystal value (1-12)
+    gameTotal = Math.floor(Math.random() * 120) + 19;
 
-
-//display gameTotal
+    redcrystal = Math.floor(Math.random()*12) + 1;
+    bluecrystal = Math.floor(Math.random()*12) + 1;
+    purplecrystal = Math.floor(Math.random()*12) + 1;
+    greencrystal = Math.floor(Math.random()*12) + 1;
+//display gameboard
+    console.log("game # = " + gameTotal + " red= " +   redcrystal + " green= " + greencrystal);
 
 }
 //  PLAY-----------------------
+$(document).ready(function() {
+console.log("start");
+    startGame();
+//  Which crystal selected?
+ 
+    $("button").on('click', function(){
+    if ($(this).attr("value")==="redcrystal"){
+        crystalTotal = crystalTotal +  redcrystal;
+    };
 
-//  Which crystal selected?  
+    console.log(crystalTotal); 
+    
+
+    });
+    
+     
+
+
+    }) ;
+
+
 //  Add crystal's value to crystalTotal
 //  Update crystalTotal display
 
