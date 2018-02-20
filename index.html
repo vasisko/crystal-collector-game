@@ -23,13 +23,11 @@
                   <p class="lead">Collect the crystals you need to match the total </p>
                 </div>
               </div>
-<!-- directions-->
-<!--show number to match -->
-<!--show player points-->
-<!--display crystals-->
+<!-- **vadd directions-->
 
 <div class="container">
     <div class="row">
+      <!--display crystals-->
       <div class="col">
         <div class="btn-group" role="group" aria-label="Basic example">
         <img src="./assets/images/bluecrystal.jpeg" class="rounded mr-2" value="bluecrystal">
@@ -39,10 +37,29 @@
         </div>
       </div>
     </div>
-<!--display wins/losses-->
-</div>
 
+    <div class="row">
+      <!--display wins/losses-->
+      <div class="col-md-2">
+        <p>Match this:</p>
+        <span id="gameTotal"></span>
+      </div>
+      <div class="col-md-2">
+        <p>Your total:</p>
+        <span id="crystalTotal"></span>
+      </div>
+      <div class="col-md-6">
+       
+        <p>Wins: <span id="wins"></span></p>
+        <p>Losses:  <span id="losses"></span></p>
+      </div>
+      <div class="col-md-2">
+          <p><span id="gameOverMsg"> </span></p>
+      </div>
+    </div>
 
+  </div>
+  
 
 <script src="./assets/javascript/game.js"></script>
 </body>

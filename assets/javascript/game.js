@@ -4,7 +4,8 @@
 
 
 //Game Variables//
-
+var win=0;
+var lose=0;
 var redcrystal;
 var bluecrystal;
 var greencrystal;
@@ -33,38 +34,51 @@ function startGame() {
 }
 //  --------------PLAY-----------------------
 $(document).ready(function () {
-    console.log("start");
+    
+    // Initialize variables, clear var's
     startGame();
-    //  Which crystal selected?  Determine, add value
+
 
     $("img").on('click', function () {
 
+        //  If player score has not met or exceeded game number, PLAY
         if(crystalTotal < gameTotal){
 
+            // Get clicked crystal type, add value to players total
             if ($(this).attr("value") === "redcrystal") {
             crystalTotal +=  redcrystal;
-        }
+             }
             else if ($(this).attr("value") === "bluecrystal") {
             crystalTotal +=  bluecrystal;
-        }
+             }
             else if ($(this).attr("value") === "purplecrystal") {
             crystalTotal +=  purplecrystal;
-        }
+             }
             else if ($(this).attr("value") === "greencrystal") {
             crystalTotal +=  greencrystal;
-        };
-    }
-        console.log(crystalTotal);
-
-
-    });
-    //------WIN-----------
-    if (crystalTotal === gameTotal){
+            }
+            console.log(crystalTotal);
+        }
         
-    }
+
+    //------WIN-----------
+        else if (crystalTotal === gameTotal){
+        win++;
+        $('#gameOverMsg').text("You Won!!");
+        
+        }
 
     //------LOSES-----------
-    if (crystalTotal > gameTotal){}
+        else if (crystalTotal > gameTotal){
+            lose++;
+            $('#gameOverMsg').text("You Lost");
+        }
+
+    // Update Score
+        $('#wins').html(win);    
+        $('#losses').html(lose);
+        
+    });
 });
 
 
