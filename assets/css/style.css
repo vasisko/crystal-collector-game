@@ -2,20 +2,29 @@ body {
     font-size: 16px;
 }
 
+/* change color of jumbotron, make it narrower */
 .jumboCV {
     padding:0.8rem;
     background-color: white;
 }
+/* add background to crystals, set height */
 .shinybg {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     height: 220px;
 }
-.number-large {
-    font-size:3rem;
-}
+/* set game board color and width */
 .gamebd{
     background-color:black;
     color: white;
     max-width: 600px;
 }
+/* increase display size of game and crystal totals */
+.number-large {
+    font-size:3rem;
+    margin-left: 10px;
+}
+.number-medium {
+    font-size:2.2rem;
+}
+

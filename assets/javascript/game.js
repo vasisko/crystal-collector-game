@@ -30,18 +30,27 @@ function startGame() {
     greencrystal = Math.floor(Math.random() * 12) + 1;
     //display gameboard
     console.log("game # = " + gameTotal + " red= " + redcrystal + " blue= " + bluecrystal+ " purplegreen= " + purplecrystal + " green= " + greencrystal);
-
+    //initialize totals
+    $("#gameTotal").html(gameTotal);
+    $("#crystalTotal").html(crystalTotal);
+    $('#wins').html(win);    
+    $('#losses').html(lose);
 }
 //  --------------PLAY-----------------------
 $(document).ready(function () {
-    
-    // Initialize variables, clear var's
-    startGame();
+    //initial game board message
+    $('#gameOverMsg').text("Pick a crystal");
 
-    $("#gameTotal").html(gameTotal);
+    // Initialize/refresh/clear variables
+    startGame();
+    
+    // Get players crystal, add & compare
     $("img").on('click', function () {
 
-        //  If player score has not met or exceeded game number, PLAY
+        //  If restartimg, clear win/lose message once player starts picking crystals
+        $('#gameOverMsg').text("Pick a crystal");
+
+         // --- PLAY--- (If player score has not met or exceeded game number)
         if(crystalTotal < gameTotal){
 
             // Get clicked crystal type, add value to players total
@@ -58,39 +67,30 @@ $(document).ready(function () {
             crystalTotal +=  greencrystal;
             }
             $("#crystalTotal").html(crystalTotal);
-        }
-        
-    //------WIN-----------
-        else if (crystalTotal === gameTotal){
-            win++;
-            $('#gameOverMsg').text("You Won!!");      
-        }
 
-    //------LOSES-----------
-        else if (crystalTotal > gameTotal){
-            lose++;
-            $('#gameOverMsg').text("You Lost");
+            //did this crystal reach or exceed game total?
+            if (crystalTotal === gameTotal){
+                //------WIN-----------
+                win++;
+                $('#gameOverMsg').text("You Won!!");     
+                // Update Score
+                $('#wins').html(win);  
+                //  Restart
+                startGame();
+            }
+            else if (crystalTotal > gameTotal){
+                //------LOSE-----------
+                lose++;
+                $('#gameOverMsg').text("You Lost");
+                 // Update Score
+                $('#losses').html(lose);
+                //  Restart 
+                startGame();
+            }
         }
-
-    // Update Score
-        $('#wins').html(win);    
-        $('#losses').html(lose);
-        
     });
-});
-
-
-//  Add crystal's value to crystalTotal
-//  Update crystalTotal display
-
-//  if crystalTotal < gameTotal, keep playing 
-
-// else  game over.....
-//      if crystalTotal=gameTotal  you WIN  update win count win++
-//      else you LOSE update lose count lose++
-//      display result win/lose msg
-//      update scoreboard win/loss
-//  start over:  call start function - zeros out crystals/gametotal,
-//  PLAY again
+   
+       
+    });
 
 
