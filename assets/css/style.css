@@ -3,13 +3,13 @@ body {
 }
 
 .jumboCV {
-    padding:0.9rem;
+    padding:0.8rem;
     background-color: white;
 }
 .shinybg {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
-    height: 350px;
+    height: 220px;
 }
 .number-large {
     font-size:3rem;

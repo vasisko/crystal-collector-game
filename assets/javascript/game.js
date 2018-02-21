@@ -60,12 +60,10 @@ $(document).ready(function () {
             $("#crystalTotal").html(crystalTotal);
         }
         
-
     //------WIN-----------
         else if (crystalTotal === gameTotal){
-        win++;
-        $('#gameOverMsg').text("You Won!!");
-        
+            win++;
+            $('#gameOverMsg').text("You Won!!");      
         }
 
     //------LOSES-----------

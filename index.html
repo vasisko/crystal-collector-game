@@ -5,72 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!--Link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <!--<link rel="stylesheet" href=".assets/css/reset.css">-->
     <link rel="stylesheet" href="./assets/css/style.css">
- <!-- Added link to the jQuery Library -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!-- Link to jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <title>Week 4 Game: Crystal Math....it's ADD-icting</title> 
 
 </head>
 <body>
 
-        <div class="jumbotron jumbotron-fluid jumboCV">
-                <div class="container">
-                  <h1 class="display-4">Crystal Collector</h1>
-                  <p class="lead">Collect your crystals....can your your crystals add up?</p>
-                </div>
-        </div>
+  <!--Page title-->
+  <div class="jumbotron jumbotron-fluid jumboCV">
+    <div class="container">
+        <h1 class="display-4">Crystal Collector</h1>
+        <p class="lead">Collect your crystals....can your crystals add up?</p>
+    </div>
+  </div>
+
 <!-- **vadd directions-->
 
 <div class="container pt-0">
-    
+  
+  <!-- Gameboard display -->
+
   <div class="row gamebd">
-    <!--display wins/losses-->
+
+    <!--display value to match-->
   <div class="col-md-3">
       <p>Match this:</p>
       <p class="number-large"><span id="gameTotal"></span></p>
   </div>
+  <!--display player crystal total-->
   <div class="col-md-3">
       <p>Your total:</p>
       <p class="number-large"><span id="crystalTotal"></span></p>
   </div>
+  <!--display wins/losses-->
   <div class="col-md-3">
-     
+      <p>SCORE</p>
       <p>Wins: <span id="wins"></span></p>
       <p>Losses:  <span id="losses"></span></p>
   </div>
+  <!--display game over message: win or lose-->
   <div class="col-md-3">
-        <p class="number-large"><span id="gameOverMsg"> </span></p>
+      <p class="number-large"><span id="gameOverMsg"> </span></p>
   </div>
 </div>
 
 
-
-
-  <div class="row">
-    <!--display crystals-->
-    <div class="col justify-content-center pt-2 shinybg">
+  <!--display crystals-->
+  <div class="row align-items-center">
+    <div class="col-md-12 shinybg">
       
-      <img src="./assets/images/crystal_blue.gif" class="rounded mr-2" value="bluecrystal">
-      <img src="./assets/images/crystal_red.gif" class="rounded mr-2" value="redcrystal">
-      <img src="./assets/images/crystal_green.gif" class="rounded mr-2"  value="greencrystal">
-      <img src="./assets/images/crystal_purple.gif" class="rounded mr-2" value="purplecrystal">
-      
+      <img src="./assets/images/crystal_blue.gif" class="rounded mr-5 mt-5" value="bluecrystal">
+      <img src="./assets/images/crystal_red.gif" class="rounded mr-5 mt-5"value="redcrystal">
+      <img src="./assets/images/crystal_green.gif" class="rounded mr-5 mt-5"  value="greencrystal">
+      <img src="./assets/images/crystal_purple.gif" class="rounded mt-5" value="purplecrystal">
+    
     </div>
   </div>
 
-  
-
-
-    
-
-
-
-
-  </div>
+ </div>
   
 
 <script src="./assets/javascript/game.js"></script>
