@@ -19,10 +19,10 @@ var addtototal;
 //Start:Initialize Variables
 
 function startGame() {
-
+    gameTotal=0;
     crystalTotal = 0;
     // Set random values:gameTotal(from 19-120) and each crystal value (1-12)
-    gameTotal = Math.floor(Math.random() * 120) + 19;
+    gameTotal = Math.floor(Math.random() * 101) + 19;
 
     redcrystal = Math.floor(Math.random() * 12) + 1;
     bluecrystal = Math.floor(Math.random() * 12) + 1;
@@ -38,7 +38,7 @@ $(document).ready(function () {
     // Initialize variables, clear var's
     startGame();
 
-
+    $("#gameTotal").html(gameTotal);
     $("img").on('click', function () {
 
         //  If player score has not met or exceeded game number, PLAY
@@ -57,7 +57,7 @@ $(document).ready(function () {
             else if ($(this).attr("value") === "greencrystal") {
             crystalTotal +=  greencrystal;
             }
-            console.log(crystalTotal);
+            $("#crystalTotal").html(crystalTotal);
         }
         
 

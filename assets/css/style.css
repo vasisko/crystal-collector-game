@@ -1,8 +1,21 @@
 body {
-    background-image: url("../images/background.jpg");
+    font-size: 16px;
 }
 
-.jumbotron {
-    padding:1rem;
-    background-color: none:
+.jumboCV {
+    padding:0.9rem;
+    background-color: white;
+}
+.shinybg {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    height: 350px;
+}
+.number-large {
+    font-size:3rem;
+}
+.gamebd{
+    background-color:black;
+    color: white;
+    max-width: 600px;
 }

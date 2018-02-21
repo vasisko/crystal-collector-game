@@ -17,46 +17,58 @@
 </head>
 <body>
 
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron jumbotron-fluid jumboCV">
                 <div class="container">
                   <h1 class="display-4">Crystal Collector</h1>
-                  <p class="lead">Collect the crystals you need to match the total </p>
+                  <p class="lead">Collect your crystals....can your your crystals add up?</p>
                 </div>
-              </div>
+        </div>
 <!-- **vadd directions-->
 
-<div class="container">
-    <div class="row">
-      <!--display crystals-->
-      <div class="col">
-        <div class="btn-group" role="group" aria-label="Basic example">
-        <img src="./assets/images/bluecrystal.jpeg" class="rounded mr-2" value="bluecrystal">
-        <img src="./assets/images/redcrystal.jpeg" class="rounded mr-2" value="redcrystal">
-        <img src="./assets/images/purplecrystal.jpeg" class="rounded mr-2"  value="purplecrystal">
-        <img src="./assets/images/greencrystal.jpeg" class="rounded mr-2" value="greencrystal">
-        </div>
-      </div>
-    </div>
+<div class="container pt-0">
+    
+  <div class="row gamebd">
+    <!--display wins/losses-->
+  <div class="col-md-3">
+      <p>Match this:</p>
+      <p class="number-large"><span id="gameTotal"></span></p>
+  </div>
+  <div class="col-md-3">
+      <p>Your total:</p>
+      <p class="number-large"><span id="crystalTotal"></span></p>
+  </div>
+  <div class="col-md-3">
+     
+      <p>Wins: <span id="wins"></span></p>
+      <p>Losses:  <span id="losses"></span></p>
+  </div>
+  <div class="col-md-3">
+        <p class="number-large"><span id="gameOverMsg"> </span></p>
+  </div>
+</div>
 
-    <div class="row">
-      <!--display wins/losses-->
-      <div class="col-md-2">
-        <p>Match this:</p>
-        <span id="gameTotal"></span>
-      </div>
-      <div class="col-md-2">
-        <p>Your total:</p>
-        <span id="crystalTotal"></span>
-      </div>
-      <div class="col-md-6">
-       
-        <p>Wins: <span id="wins"></span></p>
-        <p>Losses:  <span id="losses"></span></p>
-      </div>
-      <div class="col-md-2">
-          <p><span id="gameOverMsg"> </span></p>
-      </div>
+
+
+
+  <div class="row">
+    <!--display crystals-->
+    <div class="col justify-content-center pt-2 shinybg">
+      
+      <img src="./assets/images/crystal_blue.gif" class="rounded mr-2" value="bluecrystal">
+      <img src="./assets/images/crystal_red.gif" class="rounded mr-2" value="redcrystal">
+      <img src="./assets/images/crystal_green.gif" class="rounded mr-2"  value="greencrystal">
+      <img src="./assets/images/crystal_purple.gif" class="rounded mr-2" value="purplecrystal">
+      
     </div>
+  </div>
+
+  
+
+
+    
+
+
+
 
   </div>
   
