@@ -1,5 +1,5 @@
-# week-4-game
-Crystal Collector game
+# Crystal-Collector-Game
+Crystal Collector Javascript Game
 
 Try to match the total value of your crystals to the game total.
 
